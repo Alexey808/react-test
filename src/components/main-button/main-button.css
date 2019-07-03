@@ -1,0 +1,28 @@
+.main-button {
+    background-color: #282c34;
+    color: #61dafb;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 24px;
+    font-size: 24px;
+    border: 1px solid #61dafb;
+    box-shadow: 0 0 100px -8px #60dafb;
+    outline: none;
+}
+.main-button:hover {
+    cursor: pointer;
+}
+
+.content-container {
+    align-items: center;
+    display: flex;
+}
+.main-button.active .button-icon {
+    animation: App-logo-spin infinite 5s linear;
+}
+.button-container {
+    outline: none;
+}
+.button-icon {
+    width: 40px;
+}
