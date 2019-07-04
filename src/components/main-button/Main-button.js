@@ -7,28 +7,18 @@ const ButtonIcon = () => {
 };
 
 export default class MainButton extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isVisible: false
-		};
-	}
-
-
-
-
 	render() {
-		const {isVisible} = this.state;
+		const {active} = this.props;
 		console.log(this.props);
 		let classNames='main-button';
-		if (isVisible) {
+		if (active) {
 			classNames += ' active'
 		}
 		const style = {display: 'flex', justifyContent: 'center'};
 		return(
 			<div style={style} className='button-container'>
 				<button className={classNames}
-				        onClick={() => this.props.myClick()}>
+				        onClick={()=>this.props.myClick('_test_')}>
 					<div className='content-container'>
 						<ButtonIcon/>
 						<span>Click me</span>
