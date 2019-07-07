@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main";
 import Crud from "./components/crud/crud";
+import ReduxTest from "./components/redux-test/redux-test";
+
+// import './components/redux-test/redux-simple';
 
 function App() {
   return (
@@ -26,11 +29,13 @@ function App() {
 	      </header>
 	    </div>
 
-	    <div>
-		    <Crud/>
-	    </div>
+	    <Crud/>
+		 <ReduxTest/>
     </div>
   );
 }
 
 export default App;
+
+
+
