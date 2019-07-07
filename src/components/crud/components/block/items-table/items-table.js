@@ -1,5 +1,5 @@
 import React from 'react';
-import './items-table';
+import './item.table.css';
 import LineItem from "../line-item/line-item";
 
 export default class ItemsTable extends React.Component {
@@ -8,10 +8,9 @@ export default class ItemsTable extends React.Component {
 	// }
 
 	render() {
-		const {name, parameter, options, description} = this.props.items;
 		const items = this.props.items.map((itemElement) => {
 			return (
-				<div>
+				<div key={itemElement.id}>
 					<LineItem
 						name={itemElement.name}
 						parameter={itemElement.parameter}
@@ -26,13 +25,7 @@ export default class ItemsTable extends React.Component {
 				<div className='items-table'>
 					<h2 className='item-title'>List items</h2>
 					<div>
-						<LineItem
-							name={name}
-							parameter={parameter}
-							options={options}
-							description={description}
-						/>
-
+						{items}
 					</div>
 				</div>
 			</div>

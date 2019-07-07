@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './input.css';
 
 export default class Input extends React.Component {
 	onChange(e) {
-		console.log(this);
+		console.log(e);
 	}
 
 	render() {
@@ -11,7 +11,7 @@ export default class Input extends React.Component {
 
 		return(
 			<div>
-				<input type='text' value={value} onChange={(e) => this.onChange(e)}/>
+				<input className='input' type='text' value={value} onChange={(e) => this.onChange(e)}/>
 			</div>
 		);
 	}

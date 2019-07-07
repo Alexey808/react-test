@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main";
-import Crud from "./components/crud/Crud";
+import Crud from "./components/crud/crud";
 
 function App() {
   return (

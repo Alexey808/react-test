@@ -1,13 +1,15 @@
-.form-container {
+.table-container {
     padding-bottom: 12px;
 }
-.form-card {
+
+.items-table {
     color: #282c34;
     padding: 12px;
     background-color: #eee;
     border-radius: 4px;
     display: inline-block;
 }
-.form-title {
+
+.item-title {
     margin: 0 12px 8px 4px;
 }
