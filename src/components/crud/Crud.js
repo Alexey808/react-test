@@ -1,14 +1,29 @@
 import React, {Component} from 'react';
 import './crud.css';
 import LineItem from "./components/block/line-item/line-item";
-import ItemTable from "./components/block/items-table/item-table";
+import ItemsTable from "./components/block/items-table/items-table";
+import ItemForm from "./components/block/item-form/item-form";
 
-const Mok = {
-	name: 'Name',
-	parameter: 'Parameter',
-	options: 'Options',
-	description: 'Description'
-};
+const Mok = [
+	{
+		name: 'Name',
+		parameter: 'Parameter',
+		options: 'Options',
+		description: 'Description'
+	},
+	{
+		name: 'Name',
+		parameter: 'Parameter',
+		options: 'Options',
+		description: 'Description'
+	},
+	{
+		name: 'Name',
+		parameter: 'Parameter',
+		options: 'Options',
+		description: 'Description'
+	},
+];
 
 
 
@@ -21,7 +36,8 @@ export default class Crud extends React.Component {
 		const {isVisible} = this.props;
 		return (
 			<div>
-				<ItemTable items={Mok}/>
+				<ItemsTable items={Mok}/>
+				<ItemForm items={Mok}/>
 			</div>
 		);
 	}
