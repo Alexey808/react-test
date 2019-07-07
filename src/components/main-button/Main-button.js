@@ -21,8 +21,7 @@ export default class MainButton extends Component {
 				        onClick={()=>this.props.myClick('_test_')}>
 					<div className='content-container'>
 						<ButtonIcon/>
-						<span>Click me</span>
-						<ButtonIcon/>
+						Test button
 					</div>
 				</button>
 			</div>

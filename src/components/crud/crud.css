@@ -1,0 +1,33 @@
+.table-container {
+    padding: 12px;
+}
+
+.items-table {
+    color: #282c34;
+    padding: 12px;
+    background-color: #eee;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.item-title {
+    margin: 0 12px 8px 4px;
+}
+
+.item-list {
+    display: flex;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.item {
+    padding: 4px 8px;
+    overflow: hidden;
+}

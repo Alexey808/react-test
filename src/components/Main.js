@@ -23,7 +23,6 @@ export default class Main extends Component {
 		return (
 			<div>
 				<MainButton active={isActive} myClick={(test)=>this.onClick(test)}/>
-				<AdditionalComponent />
 			</div>
 		);
 	}
