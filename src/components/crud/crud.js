@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './crud.css';
 import LineItem from "./components/block/line-item/line-item";
 import ItemsTable from "./components/block/items-table/items-table";
@@ -6,21 +6,21 @@ import ItemForm from "./components/block/item-form/item-form";
 
 const Mok = [
 	{
-		id: 0,
+		id: '0a',
 		name: 'Name0',
 		parameter: 'Parameter',
 		options: 'Options',
 		description: 'Description'
 	},
 	{
-		id: 1,
+		id: '1b',
 		name: 'Name1',
 		parameter: 'Parameter',
 		options: 'Options',
 		description: 'Description'
 	},
 	{
-		id: 2,
+		id: '2c',
 		name: 'Name2',
 		parameter: 'Parameter',
 		options: 'Options',
@@ -32,16 +32,44 @@ const Mok = [
 
 export default class Crud extends React.Component {
 	state = {
-		isVisible: false
+		mokList: Mok,
+		selected: 0,
+	};
+
+	deleteItem = (id) => {
+		const {mokList} = this.state;
+		const updateItems = mokList.filter((item) => item.id !== id);
+		this.setState({mokList: updateItems});
+	};
+
+	selectItem = (id) => {
+		console.log(id);
+		this.setState({selected: id})
+	};
+
+	addItem = () => {
+		const newItem = {
+			id: Math.random().toString(36).substr(2, 9),
+			name: 'newItem',
+			parameter: 'newParameter',
+			options: 'newOptions',
+			description: 'newDescription'
+		};
+		const updateItems = [...this.state.mokList, newItem];
+		this.setState({mokList: updateItems})
 	};
 
 	render() {
-		const {isVisible} = this.props;
-
+		const {mokList} = this.state;
 		return (
 			<div className='container'>
-				<ItemForm items={Mok}/>
-				<ItemsTable items={Mok}/>
+				<ItemForm items={mokList}
+				          onAddItem={this.addItem}
+				/>
+				<ItemsTable items={mokList}
+				            onDelete={this.deleteItem}
+				            onSelect={this.selectItem}
+				/>
 			</div>
 		);
 	}

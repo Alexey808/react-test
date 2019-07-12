@@ -11,3 +11,13 @@
 .form-title {
     margin: 0 12px 8px 4px;
 }
+
+.add-button {
+    margin-top: 8px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #999;
+    color: #fff;
+    border: none;
+    padding: 8px;
+}
