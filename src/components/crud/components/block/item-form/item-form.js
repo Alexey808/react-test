@@ -3,26 +3,36 @@ import './item-form.css';
 import Input from "../../common/input/input";
 
 export default class ItemForm extends React.Component {
+	state = {
+		nameValue: ''
+	};
 
-	onChange(e) {
-		console.log(e);
-	}
+	onChange = (value) => {
+		this.setState({nameValue: value});
+	};
+
+	onSubmit = (e) => {
+		e.preventDefault();
+		this.props.onAddItem(this.state.nameValue);
+	};
 
 	render() {
 		const {onAddItem} = this.props;
-		const {name, parameter, options, description} = this.props.items[0];
+		const {nameValue} = this.state;
+
+		// const selected = this.props.items.find((item) => item.id === this.props.selectedItemId) || {};
+		// const {name = '', parameter = '', options  = '', description = ''} = selected;
 
 		return(
 			<div className={'form-container'}>
-				<div className={'form-card'}>
+				<form className={'form-card'} onSubmit={this.onSubmit}>
 					<h2 className={'form-title'}>Item form</h2>
 					<div>
-						<Input value={name} change={(e)=>this.onChange(e)}/>
+						<Input onChange={this.onChange} value={nameValue}/>
 					</div>
 
-					<button className={'add-button'} onClick={() => onAddItem()}>Add base item</button>
-				</div>
-
+					<button className={'add-button'} onClick={this.onAddItem}>Add base item</button>
+				</form>
 			</div>
 		);
 	}

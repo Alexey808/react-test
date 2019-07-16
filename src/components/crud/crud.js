@@ -32,8 +32,12 @@ const Mok = [
 
 export default class Crud extends React.Component {
 	state = {
-		mokList: Mok,
-		selected: 0,
+		mokList: [
+			this.createItem('item1'),
+			this.createItem('item2'),
+			this.createItem('item3'),
+		],
+		selectedItemId: null,
 	};
 
 	deleteItem = (id) => {
@@ -42,29 +46,34 @@ export default class Crud extends React.Component {
 		this.setState({mokList: updateItems});
 	};
 
-	selectItem = (id) => {
-		console.log(id);
-		this.setState({selected: id})
-	};
-
-	addItem = () => {
-		const newItem = {
-			id: Math.random().toString(36).substr(2, 9),
-			name: 'newItem',
-			parameter: 'newParameter',
-			options: 'newOptions',
-			description: 'newDescription'
-		};
+	addItem = (name) => {
+		const newItem = this.createItem(name);
 		const updateItems = [...this.state.mokList, newItem];
 		this.setState({mokList: updateItems})
 	};
 
+	createItem(str) {
+		const name =  str.length ? str : 'item';
+		return {
+			id: Math.random().toString(36).substr(2, 9),
+			name: name,
+			parameter: 'parameter',
+			options: 'options',
+			description: 'description'
+		};
+	};
+
+	selectItem = (id) => {
+		this.setState({selectedItemId: id})
+	};
+
 	render() {
-		const {mokList} = this.state;
+		const {mokList, selectedItemId} = this.state;
 		return (
 			<div className='container'>
 				<ItemForm items={mokList}
 				          onAddItem={this.addItem}
+				          selectedItemId={selectedItemId}
 				/>
 				<ItemsTable items={mokList}
 				            onDelete={this.deleteItem}

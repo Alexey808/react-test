@@ -2,17 +2,19 @@ import React from 'react';
 import './input.css';
 
 export default class Input extends React.Component {
-	onChange(e) {
-		console.log(e);
-	}
+	state = {
+		valueInput: ''
+	};
+
+	changeInput = (e) => {
+		this.props.onChange(e.target.value);
+	};
 
 	render() {
-		const {value} = this.props;
+		const {value = ''} = this.props;
 
 		return(
-			<div>
-				<input className='input' type='text' value={value} onChange={(e) => this.onChange(e)}/>
-			</div>
+			<input className='input' type='text' onChange={this.changeInput} value={value}/>
 		);
 	}
 };
