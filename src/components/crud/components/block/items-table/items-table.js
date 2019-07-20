@@ -27,7 +27,13 @@ export default class ItemsTable extends React.Component {
 		return (
 			<div className="table-container">
 				<div className="items-table">
-					<h2 className="item-title">List items</h2>
+					<h2 className="title">List items</h2>
+					<div className='title-table'>
+						<div>Name</div>
+						<div>Parameter</div>
+						<div>Options</div>
+						<div>Description</div>
+					</div>
 					<div>
 						{items}
 					</div>

@@ -6,7 +6,7 @@ const LineItem = ({name, parameter, options, description}) => {
 		<div className='item-container'>
 			<div className='item-row'>
 				<div className='item'>{name}</div>
-				<div className='item'>{parameter}</div>
+				<div className='item'>{String(parameter)}</div>
 				<div className='item'>{options}</div>
 				<div className='item'>{description}</div>
 			</div>
