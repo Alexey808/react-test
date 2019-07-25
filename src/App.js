@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main";
-import Crud from "./components/crud/crud";
 import ReduxTest from "./components/redux-test/redux-test";
 import TestReactFragment from "./components/test-components/react-fragment/react-fragment";
+import ListItems from './components/crud/list-items';
 
 // import './components/redux-test/redux-simple';
 
@@ -34,7 +34,7 @@ function App() {
 	      {/*</header>*/}
 	    {/*</div>*/}
 
-	    <Crud/>
+	    <ListItems/>
 		 {/*<ReduxTest/>*/}
 		 {/*<TestReactFragment/>*/}
     </div>

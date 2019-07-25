@@ -1,5 +1,5 @@
 import React from 'react';
-import './crud.css';
+import './list-items.css';
 import LineItem from "./components/block/line-item/line-item";
 import ItemsTable from "./components/block/items-table/items-table";
 import ItemForm from "./components/block/item-form/item-form";
@@ -39,7 +39,7 @@ const Mok = [
 
 
 
-export default class Crud extends React.Component {
+export default class ListItems extends React.Component {
 	state = {
 		baseCollection: [
 			this.createItem('item1'),

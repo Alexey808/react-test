@@ -43,5 +43,3 @@ export default class RadioButtons extends Component {
     );
   }
 }
-
-
