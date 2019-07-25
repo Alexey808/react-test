@@ -14,7 +14,13 @@ export default class Input extends React.Component {
 		const {value = ''} = this.props;
 
 		return(
-			<input className='input' type='text' onChange={this.changeInput} value={value}/>
+			<input 
+				defaultValue='default value'
+				className='input' 
+				type='text' 
+				onChange={this.changeInput} 
+				value={value}
+			/>
 		);
 	}
 };

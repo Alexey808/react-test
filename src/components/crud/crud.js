@@ -93,15 +93,14 @@ export default class Crud extends React.Component {
 	};
 
 	updateViewCollection = (value) => {
-		console.log('updateViewCollection', value);
 		this.setState({
 			viewCollection: value
 		})
 	}
 
-	// changeFilter(change) {
-	// 	console.log(change);
-	// }
+	changeFilter(change) {
+		console.log(change);
+	}
 
 	render() {
 		const {baseCollection, viewCollection, selectedItemId} = this.state;
@@ -112,7 +111,7 @@ export default class Crud extends React.Component {
 				          selectedItemId={selectedItemId}
 				/>
 				<Search items={baseCollection} change={this.updateViewCollection}/>
-				<Filters collection={baseCollection} changeFilter={this.updateViewCollection}/>
+				<Filters collection={baseCollection}/>
 				<ItemsTable items={viewCollection}
 				            onDelete={this.deleteItem}
 				            onSelect={this.selectItem}

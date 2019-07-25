@@ -1,18 +1,4 @@
-.filter-buttons {
-    display: inline-flex;
-    align-items: center;
-}
-
-.filter-buttons > div {
-    padding: 8px;
-    margin: 4px;
-    background-color: #999;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.filter-container {
+.search-card {
     display: inline-flex;
     flex-direction: column;
     padding: 8px;
@@ -23,6 +9,11 @@
     margin-bottom: 12px;
 }
 
-.filter-title {
+.search-title {
     margin: 0 12px 8px 4px;
+}
+
+.search-buttons {
+    display: inline-flex;
+    align-items: center;
 }
