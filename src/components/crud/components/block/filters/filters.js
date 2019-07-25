@@ -19,13 +19,15 @@ export default class Filters extends Component {
 
     return(
       <div className="filter-container">
-        <h2 className="filter-title">Filter</h2>
-        <div className="filter-buttons">
-          <RadioButtons 
-            collection={itemsList} 
-            selected={selectedParam} 
-            radioChange={(value)=>this.radioChange(value)}
-          />
+        <div className="filter-card">
+          <h2 className="filter-title">Filter</h2>
+          <div className="filter-buttons">
+            <RadioButtons 
+              collection={itemsList} 
+              selected={selectedParam} 
+              radioChange={(value)=>this.radioChange(value)}
+            />
+          </div>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.filter-container {
+.filter-card {
     display: inline-flex;
     flex-direction: column;
     padding: 8px;
