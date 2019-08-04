@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import ReduxTest from "./components/redux-test/redux-test";
 import TestReactFragment from "./components/test-components/react-fragment/react-fragment";
 import ListItems from './components/list-items/list-items';
+import Events from './components/test-components/events/events';
 
 // import './components/redux-test/redux-simple';
 
@@ -35,6 +36,7 @@ function App() {
 	    {/*</div>*/}
 
 	    <ListItems/>
+		<Events/>
 		 {/*<ReduxTest/>*/}
 		 {/*<TestReactFragment/>*/}
     </div>
