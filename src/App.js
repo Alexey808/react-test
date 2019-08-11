@@ -6,6 +6,7 @@ import ReduxTest from "./components/redux-test/redux-test";
 import TestReactFragment from "./components/test-components/react-fragment/react-fragment";
 import ListItems from './components/list-items/list-items';
 import Events from './components/test-components/events/events';
+import TestPackageImmutable from "./components/test-components/test-package-immutable/immutable";
 
 // import './components/redux-test/redux-simple';
 
@@ -35,8 +36,9 @@ function App() {
 	      {/*</header>*/}
 	    {/*</div>*/}
 
-	    <ListItems/>
-		<Events/>
+	   {/*<ListItems/>*/}
+		{/*<Events/>*/}
+		<TestPackageImmutable/>
 		 {/*<ReduxTest/>*/}
 		 {/*<TestReactFragment/>*/}
     </div>
