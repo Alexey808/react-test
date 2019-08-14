@@ -10,6 +10,7 @@ import TestPackageImmutable from "./components/test-components/test-package-immu
 import {SimpleTestComponent} from "./components/test-components/simple-test";
 import RenderFunctionsPattern from "./components/test-components/render-functions-pattern/render-functions-pattern";
 import PropertyElements from "./components/test-components/property-elements/property-elements";
+import Children from "./components/test-components/children/children";
 
 // import './components/redux-test/redux-simple';
 
@@ -44,6 +45,7 @@ function Stack() {
 			<TestReactFragment/>
 			<SimpleTestComponent/>
 			<RenderFunctionsPattern/>
+			<PropertyElements/>
 		</div>
 	);
 }
@@ -51,7 +53,7 @@ function Stack() {
 function App() {
   return (
   	 <div>
-		<PropertyElements/>
+		<Children/>
     </div>
   );
 }
