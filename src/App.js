@@ -9,6 +9,7 @@ import Events from './components/test-components/events/events';
 import TestPackageImmutable from "./components/test-components/test-package-immutable/immutable";
 import {SimpleTestComponent} from "./components/test-components/simple-test";
 import RenderFunctionsPattern from "./components/test-components/render-functions-pattern/render-functions-pattern";
+import PropertyElements from "./components/test-components/property-elements/property-elements";
 
 // import './components/redux-test/redux-simple';
 
@@ -42,7 +43,7 @@ function Stack() {
 			<ReduxTest/>
 			<TestReactFragment/>
 			<SimpleTestComponent/>
-
+			<RenderFunctionsPattern/>
 		</div>
 	);
 }
@@ -50,7 +51,7 @@ function Stack() {
 function App() {
   return (
   	 <div>
-		<RenderFunctionsPattern/>
+		<PropertyElements/>
     </div>
   );
 }

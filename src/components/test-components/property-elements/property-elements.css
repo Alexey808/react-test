@@ -1,0 +1,19 @@
+.container-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-row > div {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    padding: 2px;
+    color: #333;
+    flex: auto;
+}
+.left {
+    border: 1px dashed darkgreen;
+}
+.right {
+    border: 1px dashed dodgerblue;
+}
