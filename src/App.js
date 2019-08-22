@@ -11,6 +11,7 @@ import {SimpleTestComponent} from "./components/test-components/simple-test";
 import RenderFunctionsPattern from "./components/test-components/render-functions-pattern/render-functions-pattern";
 import PropertyElements from "./components/test-components/property-elements/property-elements";
 import Children from "./components/test-components/children/children";
+import HigherComponentContainer from "./components/test-components/higher-order-component/higher-componentn-container";
 
 // import './components/redux-test/redux-simple';
 
@@ -46,6 +47,7 @@ function Stack() {
 			<SimpleTestComponent/>
 			<RenderFunctionsPattern/>
 			<PropertyElements/>
+			<Children/>
 		</div>
 	);
 }
@@ -53,7 +55,7 @@ function Stack() {
 function App() {
   return (
   	 <div>
-		<Children/>
+		<HigherComponentContainer/>
     </div>
   );
 }
