@@ -14,6 +14,7 @@ import Children from "./components/test-components/children/children";
 import HigherComponentContainer from "./components/test-components/higher-order-component/higher-componentn-container";
 import HocCompose from "./components/test-components/hoc-compose/hoc-compose";
 import {HocInitComponent} from "./components/test-components/hoc-compose/hoc-item-list";
+import HocContext from "./components/test-components/hoc-context/hoc-context";
 
 // import './components/redux-test/redux-simple';
 
@@ -59,7 +60,8 @@ function Stack() {
 function App() {
   return (
   	 <div>
-		<HocInitComponent/>
+		{/*<HocInitComponent/>*/}
+		<HocContext/>
     </div>
   );
 }

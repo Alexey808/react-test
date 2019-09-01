@@ -13,8 +13,9 @@ export class HocInitComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<RenderItems getData={getData1} renderItem={(item) => item.name}/>
-				<RenderItems getData={getData2} renderItem={(item) => item.name}/>
+				<RenderItems getData={getData2}>
+					{(item) => item.name}
+				</RenderItems>
 			</div>
 		);
 	}
@@ -23,22 +24,28 @@ export class HocInitComponent extends React.Component {
 
 export class RenderItems extends React.Component {
 	renderItems(items) {
-		const {renderItem} = this.props;
 		return items.map((item) => {
 			const {id} = item;
-			const label = renderItem(item);
+			const label = this.props.children(item);
 			return (
 				<li key={id}>{label}</li>
 			);
 		})
 	}
 	render() {
+		debugger;
 		const {getData} = this.props;
 		const items = getData();
 		const renderedItems = this.renderItems(items);
-		return ( <ul>{renderedItems}</ul> )
+		return (
+			<ul>
+				{renderedItems}
+			</ul>
+		);
 	}
 }
+export default HocWithData(RenderItems, getData2);
+
 
 // const  HocItemList = (props) => {
 // 	return(
