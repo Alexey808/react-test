@@ -1,40 +1,16 @@
 import React from 'react';
-import {ContextConsumer} from "./hoc-context-provider-consumer";
-export default class HocContextTwo extends React.Component {
-	render() {
-		console.log('HocContextTwo -> ', this.props);
-		// const { data } = this.props;
-		// const viewItems = data.map((item) => {
-		// 	return (
-		// 		<div key={item.id}>
-		// 			{item.name}
-		// 		</div>
-		// 	);
-		// });
+import HocContextData from "./hoc-context-data";
 
-		return (
-			<div>
-				<ContextConsumer>
-					{
-						(data) => {
-							console.log('HocContextTwo data -> ', data);
-							return (
-								<div>
-									{/*{*/}
-									{/*	data.map((item) => {*/}
-									{/*		return (*/}
-									{/*			<div key={item.id}>*/}
-									{/*				{item.name}*/}
-									{/*			</div>*/}
-									{/*		);*/}
-									{/*	})*/}
-									{/*}*/}
-								</div>
-							);
-						}
-					}
-				</ContextConsumer>
-			</div>
-		);
-	}
-}
+const HocContextTwo = ({data}) => {
+		const viewItems = data.map((item) => {
+			return (
+				<div key={item.id}>
+					{item.name}
+				</div>
+			);
+		});
+
+		return <div>{viewItems}</div>;
+};
+
+export default HocContextData(HocContextTwo);

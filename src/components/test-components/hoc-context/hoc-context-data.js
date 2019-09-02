@@ -1,9 +1,10 @@
 import React from 'react';
+import {ContextConsumer} from "./hoc-context-provider-consumer";
 
 const HocContextData = (Wrapped) => {
 	return (props) => {
 		return (
-			<HocContextConsumer>
+			<ContextConsumer>
 				{
 					(data) => {
 						return (
@@ -11,7 +12,9 @@ const HocContextData = (Wrapped) => {
 						)
 					}
 				}
-			</HocContextConsumer>
+			</ContextConsumer>
 		);
 	}
 };
+
+export default HocContextData;
