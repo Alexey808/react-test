@@ -15,5 +15,13 @@ const HocContext = (props) => {
 export default HocContext;
 
 
+/**
+ * Контекст в "hoc-context-provider-consumer"
+ * Родительский компонент "hoc-context"
+ * HOC в "hoc-context-data"
+ * Дочерний получающий контекст "hoc-context-two" ("hoc-context-one" промежуточный)
+ */
+
+
 
 
