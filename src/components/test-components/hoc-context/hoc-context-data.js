@@ -1,14 +1,17 @@
 import React from 'react';
 import {ContextConsumer} from "./hoc-context-provider-consumer";
 
-const HocContextData = (Wrapped) => {
+const HocContextData = (Wrapped, mapMethodsToProps) => {
 	return (props) => {
 		return (
 			<ContextConsumer>
 				{
-					(data) => {
+					(service) => {
+						const serviceProps = mapMethodsToProps(service);
+
 						return (
-							<Wrapped {...props} data={data}/>
+							//<MyComponent props={props} service={myService}/>
+							<Wrapped {...props} {...serviceProps}/>
 						)
 					}
 				}
