@@ -12,8 +12,8 @@ import RenderFunctionsPattern from "./components/test-components/render-function
 import PropertyElements from "./components/test-components/property-elements/property-elements";
 import Children from "./components/test-components/children/children";
 import HigherComponentContainer from "./components/test-components/higher-order-component/higher-componentn-container";
-import HocCompose from "./components/test-components/hoc-compose/hoc-compose";
-import {HocInitComponent} from "./components/test-components/hoc-compose/hoc-item-list";
+import RenderChildren from "./components/test-components/render-children/render-children";
+import HocCompose, {HocInitComponent} from "./components/test-components/hoc-compose/hoc-compose";
 import HocContext from "./components/test-components/hoc-context/hoc-context";
 
 // import './components/redux-test/redux-simple';
@@ -52,7 +52,8 @@ function Stack() {
 			<PropertyElements/>
 			<Children/>
 			<HigherComponentContainer/>
-
+			<HocContext/>
+			 <RenderChildren/>
 		</div>
 	);
 }
@@ -61,7 +62,7 @@ function App() {
   return (
   	 <div>
 		{/*<HocInitComponent/>*/}
-		<HocContext/>
+		<HocCompose/>
     </div>
   );
 }
