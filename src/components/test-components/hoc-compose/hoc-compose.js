@@ -10,7 +10,7 @@ import WithService from "./helpers/with-service";
 // 	];
 // };
 
-export default class HocCompose extends React.Component {
+export class HocCompose extends React.Component {
 	render() {
 		console.log(this.props);
 		return (
@@ -19,9 +19,7 @@ export default class HocCompose extends React.Component {
 	}
 }
 
-const mapComposeToProps = (service) => {(
-	getData: service.getData()
-)} ;
+const mapComposeToProps = (service) => {} ;
 
 
 //
